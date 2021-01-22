@@ -11,23 +11,44 @@
     nav{
       background-color: rgb(146, 219, 253);
     }
-    .context section{
+    .context > article{
       min-height: 500px;
-      border: 1px solid #ced4da;
-      border-radius: .25rem;
+      border-bottom: 1px solid #ced4da;
+      padding-bottom: 10px;
     }
     #homeImg{
-      background-image: url( 'https://cdn.magdeleine.co/wp-content/uploads/2014/09/9.jpg' );
+      background-image: url( 'img/backGround.jpg' );
+      height: 700px;
+    }
+    #about_img{
+      background-image: url( 'img/about.jpg' );
+      height: 500px;
+    }
+    #experience_img{
+      background-image: url( 'img/experience.jpg' );
+      height: 500px;
+    }
+    #skill_img{
+      background-image: url( 'img/skill.jpg' );
+      height: 500px;
+    }
+    .background_img{
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: center center;
-      height: 700px;
+    }
+    .imageDiv{
+      padding: 0px;
     }
     #homeImg .headerText{
       padding-top: 300px;
     }
+    .article_content{
+      padding-top: 50px;
+    }
   </style>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#">Jeff Chen</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,30 +68,59 @@
         </ul>
       </div>
     </nav>
-    <div class="context row">
-      <div class="col-md-12 text-center" id="homeImg">
-        <div class="headerText">
-          <h1>Jeff Chen</h1>
-        </div>        
-      </div>
-      <article class="form-group col-md-8 offset-md-2" id="about"> 
-        <section>
-          11111111111111111111111111111111111111111
-        </section>
-        
-      </article>
-      <div class="form-group col-md-8 offset-md-2" id="experience">
-        <section>
-          22222222222222222222222222222222222222222
-        </section>
-        
-      </div>
-      <div class="form-group col-md-8 offset-md-2" id="skill">
-        <section>
-          33333333333333333333333333333333333333333
-        </section> 
-      </div>
+  </header>
+  <div class="context row">
+    <div class=" form-group col-md-12 text-center background_img" id="homeImg">
+      <div class="headerText">
+        <h1>Jeff Chen</h1>
+      </div>        
     </div>
+    <article class="form-group col-md-8 offset-md-2" id="about"> 
+      <section class="row">
+        <div class="col-md-6 imageDiv">
+          <div class="background_img" id="about_img"></div>
+        </div>
+        <div class="col-md-6">
+          <article id="about_content">
+            <section class="article_title"><h3>About</h3></section>
+            <section class="article_content">
+              123456
+            </section>
+          </article>
+        </div>
+      </section>
+    </article>
+    <article class="form-group col-md-8 offset-md-2" id="experience">
+      <section class="row">
+        <div class="col-md-6">
+          <article id="experience_content">
+            <section class="article_title"><h3>Experience</h3></section>
+            <section class="article_content">
+              123456
+            </section>
+          </article>
+        </div>
+        <div class="col-md-6 imageDiv">
+          <div class="background_img" id="experience_img"></div>
+        </div>
+      </section> 
+    </article>
+    <article class="form-group col-md-8 offset-md-2" id="skill">
+      <section class="row">
+        <div class="col-md-6 imageDiv">
+          <div class="background_img" id="skill_img"></div>
+        </div>
+        <div class="col-md-6">
+          <article id="skill_content">
+            <section class="article_title"><h3>Skill</h3></section>
+            <section class="article_content">
+              123456
+            </section>
+          </article>
+        </div>
+      </section> 
+    </article>
+  </div>
     
 </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
