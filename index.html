@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
     <title>Jeff's Introduction</title>
 </head>
 <body>
@@ -16,9 +19,16 @@
       border-bottom: 1px solid #ced4da;
       padding-bottom: 10px;
     }
+    .row{
+      margin-right: 0px;
+    }
+    h1{
+      font-size: 48px;
+    }
+    /* 圖片 */
     #homeImg{
       background-image: url( 'img/backGround.jpg' );
-      height: 700px;
+      height: 680px;
     }
     #about_img{
       background-image: url( 'img/about.jpg' );
@@ -44,60 +54,82 @@
     #homeImg .headerText{
       padding-top: 300px;
     }
+    .article_title h3{
+      border-left: 10px solid	#FF8F59;
+      padding-left: 10px;
+    }
+    /* 文章內容 */
     .article_content{
       padding-top: 50px;
+      min-height: 450px;
+    }
+    .article_content ul li{
+      margin-bottom: 15px;
+    }
+    .article_content li img{
+      max-height: 25px;
+    }
+    .article_content li span{
+      margin-left: 10px;
     }
   </style>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Jeff Chen</a>
+      <a class="navbar-brand" href="#">陳政揚</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">簡介 <span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#experience">學經歷</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skill">Skill</a>
+            <a class="nav-link" href="#skill">專長</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
   <div class="context row">
-    <div class=" form-group col-md-12 text-center background_img" id="homeImg">
+    <div class=" mb-3 col-md-12 text-center background_img" id="homeImg">
       <div class="headerText">
-        <h1>Jeff Chen</h1>
+        <h1>陳政揚</h1>
+        <p class="h2">我是一位挑戰自我及接觸新事物的軟體工程師</p>
       </div>        
     </div>
-    <article class="form-group col-md-8 offset-md-2" id="about"> 
+    <article class="mb-3 col-md-8 offset-md-2" id="about"> 
       <section class="row">
-        <div class="col-md-6 imageDiv">
-          <div class="background_img" id="about_img"></div>
-        </div>
-        <div class="col-md-6">
+        <div class="col order-md-2 col-md-6">
           <article id="about_content">
-            <section class="article_title"><h3>About</h3></section>
+            <section class="article_title"><h3>簡介</h3></section>
             <section class="article_content">
               123456
             </section>
           </article>
         </div>
+        <div class="col-md-6 imageDiv">
+          <div class="background_img" id="about_img"></div>
+        </div>
       </section>
     </article>
-    <article class="form-group col-md-8 offset-md-2" id="experience">
+    <article class="mb-3 col-md-8 offset-md-2" id="experience">
       <section class="row">
         <div class="col-md-6">
           <article id="experience_content">
-            <section class="article_title"><h3>Experience</h3></section>
+            <section class="article_title"><h3>學經歷</h3></section>
             <section class="article_content">
-              123456
+              <ul>
+                <li>2015年 中原大學應用數學系畢業</li>
+                <li>2018年 中興大學資訊工程系畢業</li>
+                <li>2019年 進入翔睿德股份有限公司</li>
+                <li>2019年 參與開發Pingtex(桌球發球機)專案</li>
+                <li>2020年 參與開發Synerter ERP專案</li>　
+              </ul>
             </section>
           </article>
         </div>
@@ -106,18 +138,44 @@
         </div>
       </section> 
     </article>
-    <article class="form-group col-md-8 offset-md-2" id="skill">
+    <article class="mb-3 col-md-8 offset-md-2" id="skill">
       <section class="row">
-        <div class="col-md-6 imageDiv">
-          <div class="background_img" id="skill_img"></div>
-        </div>
-        <div class="col-md-6">
+        <div class="col order-md-2 col-md-6">
           <article id="skill_content">
-            <section class="article_title"><h3>Skill</h3></section>
-            <section class="article_content">
-              123456
+            <section class="article_title"><h3>專長</h3></section>
+            <section class="article_content row">
+              <div class="mb-3 col-md-6">
+                <h4>程式語言</h4>
+                <ul>
+                  <li><img src="img/js.png" alt="JS"><span>Javascript</span></li>
+                  <li><img src="img/jquery.png" alt="Jquery"><span>Jquery</span></li>
+                  <li><img src="img/css.png" alt="Css"><span>CSS</span></li>
+                  <li><img src="img/php.png" alt="php"><span>PHP</span></li>
+                  <li><img src="img/c.png" alt="C#"><span>C#</span></li>
+                  <li><img src="img/python.png" alt="Python"><span>Python</span></li>
+                </ul>
+              </div>
+              <div class=" mb-3 col-md-6">
+                <div class="mb-3">
+                  <h4>程式框架</h4>
+                  <ul>
+                    <li><img src="img/laravel.png" alt="Laravel"><span>Laravel</span></li>
+                    <li><img src="img/core.png" alt="Asp.net_core"><span>Asp.Net Core</span></li>
+                  </ul>
+                </div>
+                <div class=" mb-3">
+                  <h4>資料庫</h4>
+                  <ul>
+                    <li><img src="img/mssql.png" alt="MSsql"><span>Sql Server</span> </li>
+                    <li><img src="img/mysql.png" alt="Mysql"><span>Mysql</span></li>
+                  </ul>
+                </div>
+              </div>
             </section>
           </article>
+        </div>
+        <div class="col-md-6 imageDiv">
+          <div class="background_img" id="skill_img"></div>
         </div>
       </section> 
     </article>
